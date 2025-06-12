@@ -1,3 +1,4 @@
+
 # Wind Energy Feasibility Dashboard (Enhanced for Submission)
 
 import pandas as pd
@@ -5,6 +6,7 @@ import numpy as np
 import streamlit as st
 from statsmodels.tsa.arima.model import ARIMA
 import matplotlib.pyplot as plt
+import base64
 
 # --- Dashboard Title ---
 st.set_page_config(page_title="Wind Energy Feasibility", layout="wide")
@@ -22,6 +24,40 @@ and estimate potential energy generation from a small wind turbine.
 - Date format is flexible; the app will attempt to parse it automatically.  
 - Forecast is for the next 30 days.
 """)
+
+# --- Sample CSV & Meteostat Instructions ---
+st.markdown("### 📌 How to Get Wind Data")
+
+# Sample CSV for download
+sample_csv = '''date,wspd
+2024-01-01,5.2
+2024-01-02,6.1
+2024-01-03,4.8
+2024-01-04,5.5
+2024-01-05,6.3
+'''
+
+def generate_download_link(csv_string, filename):
+    b64 = base64.b64encode(csv_string.encode()).decode()
+    href = f'<a href="data:file/csv;base64,{b64}" download="{filename}"> Download Sample CSV</a>'
+    return href
+
+# Display data download instructions
+st.markdown("""
+You have two options to get started with wind speed data:
+
+1. **🗂️ Use Sample Data**  
+""" + generate_download_link(sample_csv, "sample_wind_data.csv") + """
+
+2. **🌐 Get Real Data from Meteostat**  
+- Visit: [https://meteostat.net/en/](https://meteostat.net/en/)
+- Search for your city or location  
+- Choose "Daily Data"  
+- Select your date range (e.g., Jan–Dec 2024)  
+- Click **Download CSV**
+
+Once you have your CSV file, upload it using the uploader below.
+""", unsafe_allow_html=True)
 
 # --- Upload CSV File ---
 uploaded_file = st.file_uploader(" Upload your wind data CSV", type="csv")
