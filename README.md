@@ -13,6 +13,9 @@ This is an interactive Streamlit dashboard that helps users assess the wind ener
 
 - `wind_dashboard.py` — Main Streamlit dashboard code
 - `requirements.txt` — Required libraries for deployment
+##🌐 Live Demo
+
+[Click here to view the live dashboard](https://wind-energy-dashboardgit-mapnx7k5pdgborozbb9xbh.streamlit.app/)
 
 ## 🚀 How to Run Locally 
 
@@ -20,7 +23,4 @@ This is an interactive Streamlit dashboard that helps users assess the wind ener
 pip install -r requirements.txt
 streamlit run wind_dashboard.py
 
-🌐 Live Demo
-
-[Click here to view the live dashboard](https://wind-energy-dashboardgit-mapnx7k5pdgborozbb9xbh.streamlit.app/)
 
