@@ -20,7 +20,7 @@ This is an interactive Streamlit dashboard that helps users assess the wind ener
 pip install -r requirements.txt
 streamlit run wind_dashboard.py
 
-## 🌐 Live Demo
+🌐 Live Demo
 
 [Click here to view the live dashboard](https://wind-energy-dashboardgit-mapnx7k5pdgborozbb9xbh.streamlit.app/)
 
