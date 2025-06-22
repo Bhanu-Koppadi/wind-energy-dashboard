@@ -15,7 +15,7 @@ This is an interactive Streamlit dashboard that helps users assess the wind ener
 - `requirements.txt` — Required libraries for deployment
 ##🌐 Live Demo
 
-[Click here to view the live dashboard](https://wind-energy-dashboardgit-mapnx7k5pdgborozbb9xbh.streamlit.app/)
+[Click here to view the live dashboard](https://wind-energy-dashboard-gffneemxpv8ktwkkx6fjcc.streamlit.app/)
 
 ## 🚀 How to Run Locally 
 
